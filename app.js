@@ -30,12 +30,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
-app.use("/admin", adminRouter);
-app.use("/vendors", vendorsRouter);
-app.use("/auth", authRoute)
-app.use("/chat", chatRouter)
+app.use("/api", indexRouter);
+app.use("/api/users", usersRouter);
+app.use("/api/admin", adminRouter);
+app.use("/api/vendors", vendorsRouter);
+app.use("api/auth", authRoute)
+app.use("/api/chat", chatRouter)
 
 
 app.use(async (req, res, next) => {
